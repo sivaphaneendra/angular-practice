@@ -1,0 +1,7 @@
+<label> Posts: </label><button (click)="showPosts()">ShowPosts</button>
+<div *ngIf="showPost">
+    <div *ngFor="let post of posts;let i =index">
+        <p *ngIf="i<10"><strong>Id:</strong>{{post.id}}</p>
+        <p *ngIf="i<10"><strong>Title:</strong>{{post.title}}</p>
+    </div>
+</div>
