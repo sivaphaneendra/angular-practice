@@ -1,4 +1,4 @@
-# Angular QuickStart Source - Designed and developed by Siva Phaneendr
+# Angular QuickStart Source - Designed and developed by Siva Phaneendra
 ## Prerequisites
 Node.js and npm are essential to Angular development.'
 
