@@ -17,7 +17,7 @@ export class PostComponent{
   }
 
   showPosts = function(){
-      this.postsService.getPosts().subscribe(response =>{
+      this.postsService.getPosts().subscribe((response:any) =>{
         this.posts = response;
         this.showPost = true;
       });

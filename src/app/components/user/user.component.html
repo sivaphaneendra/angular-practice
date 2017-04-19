@@ -11,8 +11,9 @@
 
 <div *ngIf="showHobbies"> 
     <ul>
-        <li *ngFor="let hobby of hobbies; let i=index">{{hobby}}
-            <button (click)="deleteHobby(i)">X</button>
+        <li *ngFor="let hobby of hobbies; let i=index" (click)="selectHobby(hobby)">
+            <span [class.selected] = "hobby === selectedHobby">{{hobby}}
+            <button (click)="deleteHobby(i)">X</button></span>
         </li>
     </ul>
 </div>

@@ -10,6 +10,6 @@ export class PostsService{
 
     getPosts = function(){
         return this.http.get('https://jsonplaceholder.typicode.com/posts')
-        .map(res => res.json());
+        .map((res:any) => res.json());
     }
 }

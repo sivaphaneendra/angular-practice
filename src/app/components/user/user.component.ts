@@ -3,7 +3,13 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'user',
   moduleId: module.id,
-  templateUrl: 'user.component.html'
+  templateUrl: 'user.component.html',
+  styles:[
+        `.selected {
+            background-color: #CFD8DC !important;
+            color: white;
+        }`
+  ]
 })
 
 export class UserComponent  { 
@@ -12,7 +18,8 @@ export class UserComponent  {
   email: string;
   address: Address;
   hobbies: string[];
-  showHobbies: boolean; 
+  showHobbies: boolean;
+  selectedHobby: string; 
 
   constructor() {
       this.name = 'Siva Phaneendra';
@@ -36,6 +43,10 @@ export class UserComponent  {
 
   deleteHobby = function(index:number){
       this.hobbies.splice(index,1);
+  }
+
+  selectHobby = function(name:string){
+      this.selectedHobby = name;
   }
 }
 
