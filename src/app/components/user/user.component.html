@@ -17,3 +17,8 @@
         </li>
     </ul>
 </div>
+
+Count @ parent: {{initialCount}} <br/>
+<counter [count]="initialCount" (change)="changeCount($event)"></counter> <br/>
+
+<zone-component></zone-component>

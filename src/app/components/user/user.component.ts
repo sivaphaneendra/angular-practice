@@ -19,7 +19,8 @@ export class UserComponent  {
   address: Address;
   hobbies: string[];
   showHobbies: boolean;
-  selectedHobby: string; 
+  selectedHobby: string;
+  initialCount: number = 10; 
 
   constructor() {
       this.name = 'Siva Phaneendra';
@@ -47,6 +48,10 @@ export class UserComponent  {
 
   selectHobby = function(name:string){
       this.selectedHobby = name;
+  }
+
+  changeCount = function(event:number){
+      this.initialCount = event;
   }
 }
 
